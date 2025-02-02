@@ -18,8 +18,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .header { text-align: center;
-}
+  .header {
+    text-align: center;
+  }
 }
 .main-container {
   display: block;
@@ -44,7 +45,7 @@ h3 {
   list-style: none;
 }
 input,
-button{
+button {
   outline: none;
 }
 button {
@@ -100,7 +101,6 @@ li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
