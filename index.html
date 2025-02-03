@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Todo App</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen">
   </head>
   <body class="page">
-    <div class="header">
+    <header class="header">
       <img class="header__image" src="./eisenhower-matrix.jpg" alt="Eisenhower Matrix">
       <a class="header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </div>
-    <div class="main-container">
-      <div class="new-task">
-        <label class="new-task__label" for="new-task">Add Item</label>
-        <div class="new-task__wrapper">
-          <input class="new-task__input" id="new-task" type="text">
-          <button class="new-task__button">Add</button>
-        </div>
-      </div>
-      <div class="task-list">
-        <h3 class="task-list__title">Todo</h3>
-        <ul class="task-list__items" id="incomplete-tasks">
+    </header>
+    <main class="main-container">
+      <section class="new-task">
+        <h1 class="new-task__title">Todo App</h1>
+        <form class="new-task__form">
+          <label class="new-task__label" for="new-task">Add Item</label>
+          <div class="new-task__wrapper">
+            <input class="new-task__input" id="new-task" type="text">
+            <button class="new-task__button" type="submit">Add</button>
+          </div>
+        </form>
+      </section>
+      <section class="task-list">
+        <h2 class="task-list__title">Todo</h2>
+        <ul class="task-list__items" id="incomplete-tasks" aria-label="Incomplete tasks">
           <li class="task">
             <input class="task__checkbox" type="checkbox">
             <label class="task__label">Pay Bills</label>
             <input class="task__input" type="text">
-            <button class="task__edit-button">Edit</button>
-            <button class="task__delete-button">
-              <img class="task__delete-button-image" src="./remove.svg" alt="Remove Icon">
+            <button class="task__edit-button" aria-label="Edit task">Edit</button>
+            <button class="task__delete-button" aria-label="Delete task">
+              <img class="task__delete-button-image" src="./remove.svg" alt="">
             </button>
           </li>
           <li class="task task--edit-mode">
             <input class="task__checkbox" type="checkbox">
             <label class="task__label">Go Shopping</label>
             <input class="task__input" type="text" value="Go Shopping">
-            <button class="task__edit-button">Save</button>
-            <button class="task__delete-button">
-              <img class="task__delete-button-image" src="./remove.svg" alt="Remove Icon">
+            <button class="task__edit-button" aria-label="Save task">Save</button>
+            <button class="task__delete-button" aria-label="Delete task">
+              <img class="task__delete-button-image" src="./remove.svg" alt="">
             </button>
           </li>
         </ul>
-      </div>
-      <div class="task-list">
-        <h3 class="task-list__title">Completed</h3>
-        <ul class="task-list__items task-list__items--completed" id="completed-tasks">
+      </section>
+      <section class="task-list">
+        <h2 class="task-list__title">Completed</h2>
+        <ul class="task-list__items task-list__items--completed" id="completed-tasks" aria-label="Completed tasks">
           <li class="task">
             <input class="task__checkbox" type="checkbox" checked>
             <label class="task__label">See the Doctor</label>
             <input class="task__input" type="text">
-            <button class="task__edit-button">Edit</button>
-            <button class="task__delete-button">
-              <img class="task__delete-button-image" src="./remove.svg" alt="Remove Icon">
+            <button class="task__edit-button" aria-label="Edit task">Edit</button>
+            <button class="task__delete-button" aria-label="Delete task">
+              <img class="task__delete-button-image" src="./remove.svg" alt="">
             </button>
           </li>
         </ul>
-      </div>
-    </div>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
